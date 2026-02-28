@@ -1019,7 +1019,7 @@
             gameState.wordProgress[item.word] = 0;
         });
 
-        // ==================== MERCHANTS (Carnival of Fear) ====================
+        // ==================== MERCHANTS - ALL 26 LETTERS AVAILABLE ====================
         const merchants = [
             {
                 id: 'zara',
@@ -1032,30 +1032,30 @@
             {
                 id: 'ringo',
                 name: 'Ringo',
-                specialty: 'R, T, N, S, L, H',
+                specialty: 'R, T, N, S, L, H, J',
                 emoji: '🎪',
                 inventory: [],
-                basePrices: { 'r': 2, 't': 2, 'n': 2, 's': 3, 'l': 3, 'h': 3 }
+                basePrices: { 'r': 2, 't': 2, 'n': 2, 's': 3, 'l': 3, 'h': 3, 'j': 5 }
             },
             {
                 id: 'gus',
                 name: 'Gus',
-                specialty: 'C, P, M, D, G, B',
+                specialty: 'C, P, M, D, G, B, Y',
                 emoji: '🎫',
                 inventory: [],
-                basePrices: { 'c': 4, 'p': 4, 'm': 4, 'd': 4, 'g': 5, 'b': 5 }
+                basePrices: { 'c': 4, 'p': 4, 'm': 4, 'd': 4, 'g': 5, 'b': 5, 'y': 5 }
             },
             {
                 id: 'shadow',
                 name: 'The Shadow',
-                specialty: 'V, K, Y, F, W',
+                specialty: 'V, K, F, W, X, Z, Q',
                 emoji: '👤',
                 inventory: [],
-                basePrices: { 'v': 8, 'k': 8, 'y': 6, 'f': 6, 'w': 7 }
+                basePrices: { 'v': 8, 'k': 8, 'f': 6, 'w': 7, 'x': 10, 'z': 10, 'q': 10 }
             }
         ];
 
-        // Generate merchant inventory
+        // Generate merchant inventory - Updated to include all letters
         function generateInventory(merchantId) {
             const inventory = [];
             const count = 5 + Math.floor(Math.random() * 3);
@@ -1067,13 +1067,13 @@
                         letter = ['a','e','i','o','u'][Math.floor(Math.random() * 5)];
                         break;
                     case 'ringo':
-                        letter = ['r','t','n','s','l','h'][Math.floor(Math.random() * 6)];
+                        letter = ['r','t','n','s','l','h','j'][Math.floor(Math.random() * 7)];
                         break;
                     case 'gus':
-                        letter = ['c','p','m','d','g','b'][Math.floor(Math.random() * 6)];
+                        letter = ['c','p','m','d','g','b','y'][Math.floor(Math.random() * 7)];
                         break;
                     case 'shadow':
-                        letter = ['v','k','y','f','w'][Math.floor(Math.random() * 5)];
+                        letter = ['v','k','f','w','x','z','q'][Math.floor(Math.random() * 7)];
                         break;
                     default:
                         letter = 'a';
